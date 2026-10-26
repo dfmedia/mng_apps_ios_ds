@@ -165,9 +165,9 @@ public enum MNGBrandPalettes {
     )
     /// San Gabriel Valley Tribune (SGVT)
     public static let sgvt = MNGBrandPalette(
-        navbar: UIColor(mngHex: 0xB11E35)  /* #b11e35 · rgb(177, 30, 53) */,
+        navbar: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */,
         navtext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        tabbar: UIColor(mngHex: 0xB11E35)  /* #b11e35 · rgb(177, 30, 53) */,
+        tabbar: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */,
         tabactive: UIColor(mngHex: 0xFF6900)  /* #ff6900 · rgb(255, 105, 0) */,
         tabinactive: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         action: UIColor(mngHex: 0xFF6900)  /* #ff6900 · rgb(255, 105, 0) */,
@@ -405,21 +405,21 @@ public enum MNGBrandPalettes {
     )
     /// Denver Post Sports (TDPS)
     public static let tdps = MNGBrandPalette(
-        navbar: UIColor(mngHex: 0xC75D14)  /* #c75d14 · rgb(199, 93, 20) */,
+        navbar: UIColor(mngHex: 0xC75C14)  /* #c75c14 · rgb(199, 92, 20) */,
         navtext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        tabbar: UIColor(mngHex: 0xC75D14)  /* #c75d14 · rgb(199, 93, 20) */,
+        tabbar: UIColor(mngHex: 0xC75C14)  /* #c75c14 · rgb(199, 92, 20) */,
         tabactive: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
         tabinactive: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        action: UIColor(mngHex: 0xC75D14)  /* #c75d14 · rgb(199, 93, 20) */,
+        action: UIColor(mngHex: 0xC75C14)  /* #c75c14 · rgb(199, 92, 20) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         header: UIColor(mngHex: 0xC75C14)  /* #c75c14 · rgb(199, 92, 20) */
     )
     /// The East Bay Times (TEBT)
     public static let tebt = MNGBrandPalette(
-        navbar: UIColor(mngHex: 0x557FBA)  /* #557fba · rgb(85, 127, 186) */,
+        navbar: UIColor(mngHex: 0x5480BA)  /* #5480ba · rgb(84, 128, 186) */,
         navtext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        tabbar: UIColor(mngHex: 0x557FBA)  /* #557fba · rgb(85, 127, 186) */,
+        tabbar: UIColor(mngHex: 0x5480BA)  /* #5480ba · rgb(84, 128, 186) */,
         tabactive: UIColor(mngHex: 0x6BD1E6)  /* #6bd1e6 · rgb(107, 209, 230) */,
         tabinactive: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         action: UIColor(mngHex: 0x6BD1E6)  /* #6bd1e6 · rgb(107, 209, 230) */,
