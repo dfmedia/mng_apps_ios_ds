@@ -19,3 +19,4 @@ Legend: ✅ done · 🔄 in progress · ⏸ waiting on review/input · ⬜ not s
 - **2026-10-30** — DEC-09: Tokens/MNGTypeStyles.swift (generated): every iOS text style as shipped, with legacy-template values (mng_apps_core_ds docs/TYPE-STYLES.md).
 - **2026-11-03** — DEC-10: legacy-template values removed from MNGTypeStyles.swift, MNGButtonTokens.swift and MNGButton.swift (documented in mng_apps_core_ds docs/LEGACY-TEMPLATE.md).
 - **2026-11-03** — Figma: 56 text styles + page Type · Text styles; legacy button variants and variables removed (DEC-10); Spacing · iOS variables. Tokens/MNGScaleTokens.swift generated (DEC-11, mng_apps_core_ds).
+- **2026-11-03** — DEC-12: MNGScaleTokens.swift adds breakpoints and component metrics; text link uses MNGScale.sizeTouchMin. Figma: Breakpoints · iOS, Components · iOS; Text link bound to the touch target.

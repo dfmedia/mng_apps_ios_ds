@@ -61,7 +61,7 @@ public final class MNGTextLinkButton: UIButton {
         config.attributedTitle = AttributedString(title, attributes: AttributeContainer([.font: MNGButtonTokens.linkFont]))
         config.baseForegroundColor = color
         configuration = config
-        heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true   // Apple minimum touch target
+        heightAnchor.constraint(greaterThanOrEqualToConstant: MNGScale.sizeTouchMin).isActive = true   // Apple minimum touch target (DEC-11)
     }
 
     @available(*, unavailable)
