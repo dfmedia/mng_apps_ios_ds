@@ -9,7 +9,6 @@ public struct MNGTextStyleSpec: Equatable {
 }
 
 /// Every iOS text style as shipped (TroncKit Style.json + TroncAppThemeable), majority-market values.
-/// Legacy-template markets (BS, DP, HC, MC, OS, SS, VP) use `legacySpec` where it differs.
 public enum MNGTextStyle: String, CaseIterable {
     /// AR headline (iOS `ar-headline`): OpenSans-Bold 20 pt
     case arHeadline
@@ -59,20 +58,6 @@ public enum MNGTextStyle: String, CaseIterable {
     case labelLightLarge
     /// Label, light small (iOS `cell-label-light-small`): OpenSans-Bold 10 pt
     case labelLightSmall
-    /// Legacy: blurb (iOS `cell-blurb`): PTSerif-Regular 16 pt — legacy-template markets only
-    case legacyBlurb
-    /// Legacy: card text (iOS `cell-card-text-default`): OpenSans-Bold 13 pt — legacy-template markets only
-    case legacyCardText
-    /// Legacy: headline default (iOS `cell-headline-default`): Spectral-Medium 20 pt — legacy-template markets only
-    case legacyHeadlineDefault
-    /// Legacy: kicker left (iOS `label-kicker-left`): OpenSans-Bold 12 pt — legacy-template markets only
-    case legacyKickerLeft
-    /// Legacy: label default (iOS `cell-label-default`): OpenSans-Regular 16 pt — legacy-template markets only
-    case legacyLabelDefault
-    /// Legacy: label small left (iOS `label-normal-small-left`): OpenSans-Bold 10 pt — legacy-template markets only
-    case legacyLabelSmallLeft
-    /// Legacy: signature (iOS `cell-signature`): OpenSans-Bold 12 pt — legacy-template markets only
-    case legacySignature
     /// Menu header (iOS `menu-header`): OpenSans-Bold 14 pt
     case menuHeader
     /// Menu item (iOS `menu-text`): OpenSans-Light 16 pt
@@ -165,13 +150,6 @@ public enum MNGTextStyle: String, CaseIterable {
         case .labelBoldSmall: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 10)
         case .labelLightLarge: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 16)
         case .labelLightSmall: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 10)
-        case .legacyBlurb: return MNGTextStyleSpec(postscript: "PTSerif-Regular", size: 16)
-        case .legacyCardText: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 13)
-        case .legacyHeadlineDefault: return MNGTextStyleSpec(postscript: "Spectral-Medium", size: 20)
-        case .legacyKickerLeft: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 12)
-        case .legacyLabelDefault: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 16)
-        case .legacyLabelSmallLeft: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 10)
-        case .legacySignature: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 12)
         case .menuHeader: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
         case .menuItem: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 16)
         case .paywallBody: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 14)
@@ -207,46 +185,8 @@ public enum MNGTextStyle: String, CaseIterable {
         }
     }
 
-    /// Legacy-template value, or nil when the legacy template uses the standard value.
-    public var legacySpec: MNGTextStyleSpec? {
-        switch self {
-        case .articleBody: return MNGTextStyleSpec(postscript: "PTSerif-Regular", size: 18)
-        case .articleBodyBold: return MNGTextStyleSpec(postscript: "Spectral-Regular", size: 31)
-        case .articleBodyBoldItalic: return MNGTextStyleSpec(postscript: "PTSerif-BoldItalic", size: 18)
-        case .articleBodyItalic: return MNGTextStyleSpec(postscript: "OpenSans-SemiBoldItalic", size: 18)
-        case .articleByline: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 14)
-        case .articleDeck: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 18)
-        case .articleHeadline: return MNGTextStyleSpec(postscript: "Spectral-Regular", size: 25)
-        case .articleHeadlineTablet: return MNGTextStyleSpec(postscript: "PTSerif-Bold", size: 42)
-        case .authorBio: return MNGTextStyleSpec(postscript: "OpenSans-SemiBold", size: 18)
-        case .imageCaption: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 14)
-        case .labelBoldSmall: return MNGTextStyleSpec(postscript: "PTSerif-Bold", size: 14)
-        case .labelLightLarge: return MNGTextStyleSpec(postscript: "PTSerif-Regular", size: 16)
-        case .labelLightSmall: return MNGTextStyleSpec(postscript: "PTSerif-Regular", size: 14)
-        case .score: return MNGTextStyleSpec(postscript: "PTSerif-Bold", size: 36)
-        case .sectionFrontHeadlineHighlight: return MNGTextStyleSpec(postscript: "Spectral-Bold", size: 24)
-        case .sectionFrontHeadlineThin: return MNGTextStyleSpec(postscript: "Spectral-Bold", size: 16)
-        case .sectionFrontLabelKicker: return MNGTextStyleSpec(postscript: "PTSerif-Bold", size: 16)
-        case .sectionsListHeader: return MNGTextStyleSpec(postscript: "OpenSans-SemiBold", size: 14)
-        case .topBarTitle: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
-        default: return nil
-        }
-    }
-
-    /// Styles that exist only in the legacy template.
-    public var isLegacyOnly: Bool {
-        switch self {
-        case .legacyBlurb, .legacyCardText, .legacyHeadlineDefault, .legacyKickerLeft, .legacyLabelDefault, .legacyLabelSmallLeft, .legacySignature: return true
-        default: return false
-        }
-    }
-
     /// The production font. Falls back to the system font at the same size (never a different size).
-    public func font(legacyTemplate: Bool = false) -> UIFont {
-        let s = (legacyTemplate ? legacySpec : nil) ?? spec
-        return UIFont(name: s.postscript, size: s.size) ?? .systemFont(ofSize: s.size)
+    public var font: UIFont {
+        UIFont(name: spec.postscript, size: spec.size) ?? .systemFont(ofSize: spec.size)
     }
-
-    /// The production font for a market code, e.g. "TDP" (legacy markets get their legacy values).
-    public func font(forMarket market: String) -> UIFont { font(legacyTemplate: MNGButtonTokens.isLegacy(market)) }
 }

@@ -10,20 +10,11 @@ public enum MNGButtonTokens {
     /// Disabled label. Core `button.disabled.label`.
     public static let disabledLabel = UIColor(mngHex: 0x767676)  /* #767676 · rgb(118, 118, 118) */
 
-    /// Corner radius, standard template.
+    /// Corner radius.
     public static let cornerRadius: CGFloat = 4
-    /// Corner radius, legacy template markets.
-    public static let cornerRadiusLegacy: CGFloat = 5
-    /// Border in the fill color, legacy template markets.
-    public static let borderWidthLegacy: CGFloat = 1
     /// Height. PROVISIONAL: not in the source (MISSING-ASSETS 5.5). Future: BTN-01.
     public static let height: CGFloat = 44
 
-    /// Legacy-template markets (radius 5 + 1 pt border).
-    public static let legacyMarkets: Set<String> = ["bs", "dp", "hc", "mc", "os", "ss", "vp"]
-    public static func isLegacy(_ market: String) -> Bool { legacyMarkets.contains(market.lowercased()) }
-    public static func cornerRadius(forMarket market: String) -> CGFloat { isLegacy(market) ? cornerRadiusLegacy : cornerRadius }
-    public static func borderWidth(forMarket market: String) -> CGFloat { isLegacy(market) ? borderWidthLegacy : 0 }
 
     /// Label font: OpenSans-Bold 14, uppercase. Falls back to the bold system font at the same size.
     public static var labelFont: UIFont { UIFont(name: "OpenSans-Bold", size: 14) ?? .boldSystemFont(ofSize: 14) }

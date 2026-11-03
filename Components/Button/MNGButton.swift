@@ -9,7 +9,7 @@ import SwiftUI
 // MARK: - UIKit
 
 /// Primary button as shipped on iOS: `action` fill, white Open Sans Bold 14 uppercase label,
-/// radius 4 (legacy-template markets: radius 5 and a 1 pt border in the fill color).
+/// radius 4. (The iOS legacy-template markets ship radius 5 + a 1 pt border; acknowledged only, not built: DEC-10.)
 /// Disabled uses the Core disabled colors. Pressed uses the system filled-button highlight.
 public final class MNGPrimaryButton: UIButton {
     public let marketCode: String
@@ -25,8 +25,7 @@ public final class MNGPrimaryButton: UIButton {
         super.init(frame: .zero)
         var config = UIButton.Configuration.filled()
         config.cornerStyle = .fixed
-        config.background.cornerRadius = MNGButtonTokens.cornerRadius(forMarket: marketCode)
-        config.background.strokeWidth = MNGButtonTokens.borderWidth(forMarket: marketCode)
+        config.background.cornerRadius = MNGButtonTokens.cornerRadius
         config.title = title
         configuration = config
         configurationUpdateHandler = { [palette] button in
@@ -35,7 +34,6 @@ public final class MNGPrimaryButton: UIButton {
             let fill = enabled ? palette.action : MNGButtonTokens.disabledFill
             let label = enabled ? MNGButtonTokens.primaryLabel : MNGButtonTokens.disabledLabel
             c.baseBackgroundColor = fill
-            c.background.strokeColor = fill   // legacy border is in the fill color
             c.baseForegroundColor = label
             c.attributedTitle = AttributedString((c.title ?? "").uppercased(),
                                                  attributes: AttributeContainer([.font: MNGButtonTokens.labelFont, .foregroundColor: label]))
@@ -90,14 +88,13 @@ public struct MNGPrimaryButtonStyle: ButtonStyle {
             let action = MNGBrandPalettes.forMarket(market)?.action ?? .systemBlue
             let fill = Color(uiColor: isEnabled ? action : MNGButtonTokens.disabledFill)
             let label = Color(uiColor: isEnabled ? MNGButtonTokens.primaryLabel : MNGButtonTokens.disabledLabel)
-            let shape = RoundedRectangle(cornerRadius: MNGButtonTokens.cornerRadius(forMarket: market))
+            let shape = RoundedRectangle(cornerRadius: MNGButtonTokens.cornerRadius)
             configuration.label
                 .font(Font(MNGButtonTokens.labelFont))
                 .textCase(.uppercase)
                 .foregroundColor(label)
                 .frame(maxWidth: .infinity, minHeight: MNGButtonTokens.height)
                 .background(shape.fill(fill))
-                .overlay(shape.stroke(fill, lineWidth: MNGButtonTokens.borderWidth(forMarket: market)))
                 .opacity(configuration.isPressed ? 0.8 : 1)   // pressed: not in the source (MISSING-ASSETS 5.5)
         }
     }
