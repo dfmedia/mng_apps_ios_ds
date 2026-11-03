@@ -13,6 +13,12 @@ public struct MNGBrandPalette {
     public let alert: UIColor
     public let alerttext: UIColor
     public let header: UIColor
+    public let sectiontabbar: UIColor
+    public let sectiontabtext: UIColor
+    public let sectiontabselected: UIColor
+    public let sectiontabindicator: UIColor
+    /// Top bar icon tint: alias of `navtext` (DEC-13).
+    public var navicon: UIColor { navtext }
     /// Alias of `action` (PLAT-04).
     public var buy: UIColor { action }
     /// Alias of `action` (PLAT-04).
@@ -41,7 +47,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xDAA520)  /* #daa520 · rgb(218, 165, 32) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */
+        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x2C2D2D)  /* #2c2d2d · rgb(44, 45, 45) */,
+        sectiontabselected: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Chicago Tribune (CT)
     public static let ct = MNGBrandPalette(
@@ -53,7 +63,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x9DD1F5)  /* #9dd1f5 · rgb(157, 209, 245) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Daily Press (DP)
     public static let dp = MNGBrandPalette(
@@ -65,7 +79,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x005F7E)  /* #005f7e · rgb(0, 95, 126) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x4050B6)  /* #4050b6 · rgb(64, 80, 182) */
+        header: UIColor(mngHex: 0x4050B6)  /* #4050b6 · rgb(64, 80, 182) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x2C2D2D)  /* #2c2d2d · rgb(44, 45, 45) */,
+        sectiontabselected: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Hartford Courant (HC)
     public static let hc = MNGBrandPalette(
@@ -77,7 +95,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x4FA8D1)  /* #4fa8d1 · rgb(79, 168, 209) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */
+        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Morning Call (MC)
     public static let mc = MNGBrandPalette(
@@ -89,7 +111,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x539CC4)  /* #539cc4 · rgb(83, 156, 196) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x5C5B59)  /* #5c5b59 · rgb(92, 91, 89) */
+        header: UIColor(mngHex: 0x5C5B59)  /* #5c5b59 · rgb(92, 91, 89) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// New York Daily News (NYDN)
     public static let nydn = MNGBrandPalette(
@@ -101,7 +127,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x4492E0)  /* #4492e0 · rgb(68, 146, 224) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x4050B6)  /* #4050b6 · rgb(64, 80, 182) */
+        header: UIColor(mngHex: 0x4050B6)  /* #4050b6 · rgb(64, 80, 182) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x2C2D2D)  /* #2c2d2d · rgb(44, 45, 45) */,
+        sectiontabselected: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Orange County Register (OCR)
     public static let ocr = MNGBrandPalette(
@@ -113,7 +143,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB04F0F)  /* #b04f0f · rgb(176, 79, 15) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xB04F0F)  /* #b04f0f · rgb(176, 79, 15) */
+        header: UIColor(mngHex: 0xB04F0F)  /* #b04f0f · rgb(176, 79, 15) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Orlando Sentinel (OS)
     public static let os = MNGBrandPalette(
@@ -125,7 +159,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x15919D)  /* #15919d · rgb(21, 145, 157) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x1875BE)  /* #1875be · rgb(24, 117, 190) */
+        header: UIColor(mngHex: 0x1875BE)  /* #1875be · rgb(24, 117, 190) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Petaluma Argus-Courier (PAC)
     public static let pac = MNGBrandPalette(
@@ -137,7 +175,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xA06318)  /* #a06318 · rgb(160, 99, 24) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xA06318)  /* #a06318 · rgb(160, 99, 24) */
+        header: UIColor(mngHex: 0xA06318)  /* #a06318 · rgb(160, 99, 24) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Pasadena Star News (PSN)
     public static let psn = MNGBrandPalette(
@@ -149,7 +191,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */
+        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The San Diego Union-Tribune (SDUT)
     public static let sdut = MNGBrandPalette(
@@ -161,7 +207,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */
+        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// San Gabriel Valley Tribune (SGVT)
     public static let sgvt = MNGBrandPalette(
@@ -173,7 +223,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xFF6900)  /* #ff6900 · rgb(255, 105, 0) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */
+        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Sonoma Index Tribune (SIT)
     public static let sit = MNGBrandPalette(
@@ -185,7 +239,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x0F73A9)  /* #0f73a9 · rgb(15, 115, 169) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x0F73A9)  /* #0f73a9 · rgb(15, 115, 169) */
+        header: UIColor(mngHex: 0x0F73A9)  /* #0f73a9 · rgb(15, 115, 169) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Sun Sentinel (SS)
     public static let ss = MNGBrandPalette(
@@ -197,7 +255,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x761113)  /* #761113 · rgb(118, 17, 19) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x136283)  /* #136283 · rgb(19, 98, 131) */
+        header: UIColor(mngHex: 0x136283)  /* #136283 · rgb(19, 98, 131) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Buffzone (TB)
     public static let tb = MNGBrandPalette(
@@ -209,7 +271,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x4351AF)  /* #4351af · rgb(67, 81, 175) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x4252B0)  /* #4252b0 · rgb(66, 82, 176) */
+        header: UIColor(mngHex: 0x4252B0)  /* #4252b0 · rgb(66, 82, 176) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Bay Area News (TBAN)
     public static let tban = MNGBrandPalette(
@@ -221,7 +287,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Boulder County Preps (TBCP)
     public static let tbcp = MNGBrandPalette(
@@ -233,7 +303,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x3F51B5)  /* #3f51b5 · rgb(63, 81, 181) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x4052B5)  /* #4052b5 · rgb(64, 82, 181) */
+        header: UIColor(mngHex: 0x4052B5)  /* #4052b5 · rgb(64, 82, 181) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Broomfield Enterprise News (TBE)
     public static let tbe = MNGBrandPalette(
@@ -245,7 +319,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x4351AF)  /* #4351af · rgb(67, 81, 175) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x0070B8)  /* #0070b8 · rgb(0, 112, 184) */
+        header: UIColor(mngHex: 0x0070B8)  /* #0070b8 · rgb(0, 112, 184) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Boston Herald (TBH)
     public static let tbh = MNGBrandPalette(
@@ -257,7 +335,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x00538A)  /* #00538a · rgb(0, 83, 138) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Boston Herald Sports (TBHS)
     public static let tbhs = MNGBrandPalette(
@@ -269,7 +351,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB01E35)  /* #b01e35 · rgb(176, 30, 53) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */
+        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Canon City Daily Record (TCCDR)
     public static let tccdr = MNGBrandPalette(
@@ -281,7 +367,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x36408A)  /* #36408a · rgb(54, 64, 138) */
+        header: UIColor(mngHex: 0x36408A)  /* #36408a · rgb(54, 64, 138) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Chico Enterprise Record (TCE)
     public static let tce = MNGBrandPalette(
@@ -293,7 +383,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Colorado Hometown Weekly (TCHW)
     public static let tchw = MNGBrandPalette(
@@ -305,7 +399,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x353F8A)  /* #353f8a · rgb(53, 63, 138) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x363E8A)  /* #363e8a · rgb(54, 62, 138) */
+        header: UIColor(mngHex: 0x363E8A)  /* #363e8a · rgb(54, 62, 138) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Citizens' Voice (TCV)
     public static let tcv = MNGBrandPalette(
@@ -317,7 +415,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x434953)  /* #434953 · rgb(67, 73, 83) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x424A54)  /* #424a54 · rgb(66, 74, 84) */
+        header: UIColor(mngHex: 0x424A54)  /* #424a54 · rgb(66, 74, 84) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Daily Breeze (TDB)
     public static let tdb = MNGBrandPalette(
@@ -329,7 +431,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x9DD1F5)  /* #9dd1f5 · rgb(157, 209, 245) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Daily Camera (TDC)
     public static let tdc = MNGBrandPalette(
@@ -341,7 +447,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x007639)  /* #007639 · rgb(0, 118, 57) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x007538)  /* #007538 · rgb(0, 117, 56) */
+        header: UIColor(mngHex: 0x007538)  /* #007538 · rgb(0, 117, 56) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Delaware County Daily Times (TDCD)
     public static let tdcd = MNGBrandPalette(
@@ -353,7 +463,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x5B9BC8)  /* #5b9bc8 · rgb(91, 155, 200) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x5B9BC8)  /* #5b9bc8 · rgb(91, 155, 200) */
+        header: UIColor(mngHex: 0x5B9BC8)  /* #5b9bc8 · rgb(91, 155, 200) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Daily Freeman (TDF)
     public static let tdf = MNGBrandPalette(
@@ -365,7 +479,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x9DD1F5)  /* #9dd1f5 · rgb(157, 209, 245) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Daily Herald (TDH)
     public static let tdh = MNGBrandPalette(
@@ -377,7 +495,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x0072B4)  /* #0072b4 · rgb(0, 114, 180) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x0072B4)  /* #0072b4 · rgb(0, 114, 180) */
+        header: UIColor(mngHex: 0x0072B4)  /* #0072b4 · rgb(0, 114, 180) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Daily Local Weschester (TDLW)
     public static let tdlw = MNGBrandPalette(
@@ -389,7 +511,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x1591B7)  /* #1591b7 · rgb(21, 145, 183) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x1591B7)  /* #1591b7 · rgb(21, 145, 183) */
+        header: UIColor(mngHex: 0x1591B7)  /* #1591b7 · rgb(21, 145, 183) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Denver Post (TDP)
     public static let tdp = MNGBrandPalette(
@@ -401,7 +527,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xF7A430)  /* #f7a430 · rgb(247, 164, 48) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */
+        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Denver Post Sports (TDPS)
     public static let tdps = MNGBrandPalette(
@@ -413,7 +543,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xC75C14)  /* #c75c14 · rgb(199, 92, 20) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xC75C14)  /* #c75c14 · rgb(199, 92, 20) */
+        header: UIColor(mngHex: 0xC75C14)  /* #c75c14 · rgb(199, 92, 20) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The East Bay Times (TEBT)
     public static let tebt = MNGBrandPalette(
@@ -425,7 +559,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x6BD1E6)  /* #6bd1e6 · rgb(107, 209, 230) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x547FBA)  /* #547fba · rgb(84, 127, 186) */
+        header: UIColor(mngHex: 0x547FBA)  /* #547fba · rgb(84, 127, 186) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Estes Park Trail Gazette (TEPTG)
     public static let teptg = MNGBrandPalette(
@@ -437,7 +575,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x33408F)  /* #33408f · rgb(51, 64, 143) */
+        header: UIColor(mngHex: 0x33408F)  /* #33408f · rgb(51, 64, 143) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Eureka Times Standard (TETS)
     public static let tets = MNGBrandPalette(
@@ -449,7 +591,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x36408A)  /* #36408a · rgb(54, 64, 138) */
+        header: UIColor(mngHex: 0x36408A)  /* #36408a · rgb(54, 64, 138) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Fort Morgan Times (TFMT)
     public static let tfmt = MNGBrandPalette(
@@ -461,7 +607,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x33408F)  /* #33408f · rgb(51, 64, 143) */
+        header: UIColor(mngHex: 0x33408F)  /* #33408f · rgb(51, 64, 143) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Greeley Tribune (TGT)
     public static let tgt = MNGBrandPalette(
@@ -473,7 +623,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x44687F)  /* #44687f · rgb(68, 104, 127) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x546E80)  /* #546e80 · rgb(84, 110, 128) */
+        header: UIColor(mngHex: 0x546E80)  /* #546e80 · rgb(84, 110, 128) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Inland Valley Daily Bulletin (TIVDB)
     public static let tivdb = MNGBrandPalette(
@@ -485,7 +639,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Journal Advocate (TJA)
     public static let tja = MNGBrandPalette(
@@ -497,7 +655,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x36408A)  /* #36408a · rgb(54, 64, 138) */
+        header: UIColor(mngHex: 0x36408A)  /* #36408a · rgb(54, 64, 138) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Los Angeles Daily News (TLADN)
     public static let tladn = MNGBrandPalette(
@@ -509,7 +671,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xAB4021)  /* #ab4021 · rgb(171, 64, 33) */
+        header: UIColor(mngHex: 0xAB4021)  /* #ab4021 · rgb(171, 64, 33) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Long Beach Press-Telegram (TLBPT)
     public static let tlbpt = MNGBrandPalette(
@@ -521,7 +687,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Loveland Reporter Herald (TLR)
     public static let tlr = MNGBrandPalette(
@@ -533,7 +703,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x4E5DCA)  /* #4e5dca · rgb(78, 93, 202) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xAB4021)  /* #ab4021 · rgb(171, 64, 33) */
+        header: UIColor(mngHex: 0xAB4021)  /* #ab4021 · rgb(171, 64, 33) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Lowell Sun News for Mobile (TLS)
     public static let tls = MNGBrandPalette(
@@ -545,7 +719,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xAB4021)  /* #ab4021 · rgb(171, 64, 33) */
+        header: UIColor(mngHex: 0xAB4021)  /* #ab4021 · rgb(171, 64, 33) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Longmont Times-Call for Mobile (TLTC)
     public static let tltc = MNGBrandPalette(
@@ -557,7 +735,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x007CBA)  /* #007cba · rgb(0, 124, 186) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x007DBA)  /* #007dba · rgb(0, 125, 186) */
+        header: UIColor(mngHex: 0x007DBA)  /* #007dba · rgb(0, 125, 186) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Monterey County Herald (TMCH)
     public static let tmch = MNGBrandPalette(
@@ -569,7 +751,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x3C6292)  /* #3c6292 · rgb(60, 98, 146) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x3D6191)  /* #3d6191 · rgb(61, 97, 145) */
+        header: UIColor(mngHex: 0x3D6191)  /* #3d6191 · rgb(61, 97, 145) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Macomb Daily (TMD)
     public static let tmd = MNGBrandPalette(
@@ -581,7 +767,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x3A527A)  /* #3a527a · rgb(58, 82, 122) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x405278)  /* #405278 · rgb(64, 82, 120) */
+        header: UIColor(mngHex: 0x405278)  /* #405278 · rgb(64, 82, 120) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Marin Independent Journal News (TMI)
     public static let tmi = MNGBrandPalette(
@@ -593,7 +783,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Morning Journal (TMJ)
     public static let tmj = MNGBrandPalette(
@@ -605,7 +799,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */
+        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Mercury News (TMN)
     public static let tmn = MNGBrandPalette(
@@ -617,7 +815,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Morning Sun (TMS)
     public static let tms = MNGBrandPalette(
@@ -629,7 +831,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x3A527A)  /* #3a527a · rgb(58, 82, 122) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x405278)  /* #405278 · rgb(64, 82, 120) */
+        header: UIColor(mngHex: 0x405278)  /* #405278 · rgb(64, 82, 120) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The News Herald (TNH)
     public static let tnh = MNGBrandPalette(
@@ -641,7 +847,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xAB4021)  /* #ab4021 · rgb(171, 64, 33) */
+        header: UIColor(mngHex: 0xAB4021)  /* #ab4021 · rgb(171, 64, 33) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Oneida Daily Dispatch (TOD)
     public static let tod = MNGBrandPalette(
@@ -653,7 +863,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xBA2112)  /* #ba2112 · rgb(186, 33, 18) */
+        header: UIColor(mngHex: 0xBA2112)  /* #ba2112 · rgb(186, 33, 18) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Oakland Press (TOP)
     public static let top = MNGBrandPalette(
@@ -665,7 +879,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x0B151E)  /* #0b151e · rgb(11, 21, 30) */
+        header: UIColor(mngHex: 0x0B151E)  /* #0b151e · rgb(11, 21, 30) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Press Democrat (TPD)
     public static let tpd = MNGBrandPalette(
@@ -677,7 +895,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x9E0B0F)  /* #9e0b0f · rgb(158, 11, 15) */
+        header: UIColor(mngHex: 0x9E0B0F)  /* #9e0b0f · rgb(158, 11, 15) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Press-Enterprise (TPE)
     public static let tpe = MNGBrandPalette(
@@ -689,7 +911,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */
+        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Pottstown Mercury (TPM)
     public static let tpm = MNGBrandPalette(
@@ -701,7 +927,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */
+        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Reporter for Mobile (TR)
     public static let tr = MNGBrandPalette(
@@ -713,7 +943,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x007CBA)  /* #007cba · rgb(0, 124, 186) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x007DBA)  /* #007dba · rgb(0, 125, 186) */
+        header: UIColor(mngHex: 0x007DBA)  /* #007dba · rgb(0, 125, 186) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Redlands Daily Facts (TRDF)
     public static let trdf = MNGBrandPalette(
@@ -725,7 +959,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Reading Eagle (TRE)
     public static let tre = MNGBrandPalette(
@@ -737,7 +975,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */
+        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Republican-Herald (TRH)
     public static let trh = MNGBrandPalette(
@@ -749,7 +991,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x434953)  /* #434953 · rgb(67, 73, 83) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x424A54)  /* #424a54 · rgb(66, 74, 84) */
+        header: UIColor(mngHex: 0x424A54)  /* #424a54 · rgb(66, 74, 84) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Royal Oak Tribune (TROT)
     public static let trot = MNGBrandPalette(
@@ -761,7 +1007,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x013A67)  /* #013a67 · rgb(1, 58, 103) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x003B66)  /* #003b66 · rgb(0, 59, 102) */
+        header: UIColor(mngHex: 0x003B66)  /* #003b66 · rgb(0, 59, 102) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Troy Record (TRR)
     public static let trr = MNGBrandPalette(
@@ -773,7 +1023,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */
+        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Saratogian (TSAR)
     public static let tsar = MNGBrandPalette(
@@ -785,7 +1039,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x5D5B59)  /* #5d5b59 · rgb(93, 91, 89) */
+        header: UIColor(mngHex: 0x5D5B59)  /* #5d5b59 · rgb(93, 91, 89) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The San Bernardino Sun (TSBS)
     public static let tsbs = MNGBrandPalette(
@@ -797,7 +1055,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */
+        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Santa Cruz Sentinel (TSCS)
     public static let tscs = MNGBrandPalette(
@@ -809,7 +1071,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x36408A)  /* #36408a · rgb(54, 64, 138) */
+        header: UIColor(mngHex: 0x36408A)  /* #36408a · rgb(54, 64, 138) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Sentinel and Enterprise (TSEB)
     public static let tseb = MNGBrandPalette(
@@ -821,7 +1087,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */
+        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// St. Paul Pioneer Press (TSPPP)
     public static let tsppp = MNGBrandPalette(
@@ -833,7 +1103,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Standard-Speaker (TSS)
     public static let tss = MNGBrandPalette(
@@ -845,7 +1119,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x434953)  /* #434953 · rgb(67, 73, 83) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x424A54)  /* #424a54 · rgb(66, 74, 84) */
+        header: UIColor(mngHex: 0x424A54)  /* #424a54 · rgb(66, 74, 84) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Silicon Valley (TSV)
     public static let tsv = MNGBrandPalette(
@@ -857,7 +1135,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */
+        header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Trentonian (TT)
     public static let tt = MNGBrandPalette(
@@ -869,7 +1151,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */
+        header: UIColor(mngHex: 0x004E87)  /* #004e87 · rgb(0, 78, 135) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// The Times Herald (TTH)
     public static let tth = MNGBrandPalette(
@@ -881,7 +1167,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */
+        header: UIColor(mngHex: 0xBD3B0F)  /* #bd3b0f · rgb(189, 59, 15) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Times-Tribune (TTT)
     public static let ttt = MNGBrandPalette(
@@ -893,7 +1183,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x434953)  /* #434953 · rgb(67, 73, 83) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x424A54)  /* #424a54 · rgb(66, 74, 84) */
+        header: UIColor(mngHex: 0x424A54)  /* #424a54 · rgb(66, 74, 84) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Ukiah Daily Journal (TUDJ)
     public static let tudj = MNGBrandPalette(
@@ -905,7 +1199,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x32408F)  /* #32408f · rgb(50, 64, 143) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x408FCC)  /* #408fcc · rgb(64, 143, 204) */
+        header: UIColor(mngHex: 0x408FCC)  /* #408fcc · rgb(64, 143, 204) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Vacaville Reporter (TVR)
     public static let tvr = MNGBrandPalette(
@@ -917,7 +1215,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x408FCB)  /* #408fcb · rgb(64, 143, 203) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x408FCC)  /* #408fcc · rgb(64, 143, 204) */
+        header: UIColor(mngHex: 0x408FCC)  /* #408fcc · rgb(64, 143, 204) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Vallejo Times Herald News (TVTH)
     public static let tvth = MNGBrandPalette(
@@ -929,7 +1231,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x8D092D)  /* #8d092d · rgb(141, 9, 45) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x8C0A2E)  /* #8c0a2e · rgb(140, 10, 46) */
+        header: UIColor(mngHex: 0x8C0A2E)  /* #8c0a2e · rgb(140, 10, 46) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Woodland Daily Democrat (TWDD)
     public static let twdd = MNGBrandPalette(
@@ -941,7 +1247,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x007639)  /* #007639 · rgb(0, 118, 57) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x007739)  /* #007739 · rgb(0, 119, 57) */
+        header: UIColor(mngHex: 0x007739)  /* #007739 · rgb(0, 119, 57) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Whittier Daily News (TWDN)
     public static let twdn = MNGBrandPalette(
@@ -953,7 +1263,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0xB93611)  /* #b93611 · rgb(185, 54, 17) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */
+        header: UIColor(mngHex: 0xB01F36)  /* #b01f36 · rgb(176, 31, 54) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Virginian Pilot (VP)
     public static let vp = MNGBrandPalette(
@@ -965,7 +1279,11 @@ public enum MNGBrandPalettes {
         action: UIColor(mngHex: 0x005F7E)  /* #005f7e · rgb(0, 95, 126) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        header: UIColor(mngHex: 0x3F50B6)  /* #3f50b6 · rgb(63, 80, 182) */
+        header: UIColor(mngHex: 0x3F50B6)  /* #3f50b6 · rgb(63, 80, 182) */,
+        sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
 
     /// Palette for a market code, e.g. "TDP". Codes match the Gradle flavor names upper-cased.
