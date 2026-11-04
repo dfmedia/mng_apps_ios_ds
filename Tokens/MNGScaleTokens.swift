@@ -45,4 +45,8 @@ public enum MNGScale {
     public static let componentTabBarIconWidth: CGFloat = 26
     /// Tab bar icon height (Font Awesome, 26 x 23) (iOS)
     public static let componentTabBarIconHeight: CGFloat = 23
+    /// Your News Continue button width (Continue-* PNG image, 159 x 55 pt) (iOS)
+    public static let componentContinueWidth: CGFloat = 159
+    /// Your News Continue button height (Continue-* PNG image, 159 x 55 pt) (iOS)
+    public static let componentContinueHeight: CGFloat = 55
 }

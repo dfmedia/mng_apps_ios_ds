@@ -49,8 +49,8 @@ public enum MNGBrandPalettes {
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         header: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        sectiontabtext: UIColor(mngHex: 0x2C2D2D)  /* #2c2d2d · rgb(44, 45, 45) */,
-        sectiontabselected: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Chicago Tribune (CT)
@@ -81,8 +81,8 @@ public enum MNGBrandPalettes {
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         header: UIColor(mngHex: 0x4050B6)  /* #4050b6 · rgb(64, 80, 182) */,
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        sectiontabtext: UIColor(mngHex: 0x2C2D2D)  /* #2c2d2d · rgb(44, 45, 45) */,
-        sectiontabselected: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Hartford Courant (HC)
@@ -129,8 +129,8 @@ public enum MNGBrandPalettes {
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         header: UIColor(mngHex: 0x4050B6)  /* #4050b6 · rgb(64, 80, 182) */,
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        sectiontabtext: UIColor(mngHex: 0x2C2D2D)  /* #2c2d2d · rgb(44, 45, 45) */,
-        sectiontabselected: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
+        sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
     )
     /// Orange County Register (OCR)
