@@ -1,6 +1,6 @@
 # Project instructions — MNG iOS Design System
 
-**Read the Core instructions first:** [mng_apps_core_ds/CLAUDE.md](https://github.com/kuscholdMNG/mng_apps_core_ds/blob/main/CLAUDE.md) (local: `~/Github/mng_apps_core_ds/CLAUDE.md`). Every rule there applies here. This file adds only what is specific to iOS.
+**Read the Core instructions first:** [mng_apps_core_ds/CLAUDE.md](https://github.com/dfmedia/mng_apps_core_ds/blob/main/CLAUDE.md) (local: `~/Github/mng_apps_core_ds/CLAUDE.md`). Every rule there applies here. This file adds only what is specific to iOS.
 
 ## Scope
 
@@ -13,7 +13,7 @@ Typical iOS-only items: SF Symbols glyphs, Sign in with Apple, native eNewspaper
 | | |
 |---|---|
 | Figma | MNG iOS Design System (`uNxwBNoP4ODDUFGByi73mZ`) |
-| Repo | [kuscholdMNG/mng_apps_ios_ds](https://github.com/kuscholdMNG/mng_apps_ios_ds) · local `~/Github/mng_apps_ios_ds` |
+| Repo | [dfmedia/mng_apps_ios_ds](https://github.com/dfmedia/mng_apps_ios_ds) · local `~/Github/mng_apps_ios_ds` |
 | Shipped code | TroncKit @ `e30ad2585` |
 | Style guide | https://claude.ai/artifact/V364juyHFU3STfVZ6EgjMc |
 

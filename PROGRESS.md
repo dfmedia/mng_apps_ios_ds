@@ -23,3 +23,4 @@ Legend: ✅ done · 🔄 in progress · ⏸ waiting on review/input · ⬜ not s
 - **2026-11-03** — DEC-13: MNGBrandColors.swift adds navicon and the section bar colors per market. Figma: Shell colors · iOS (312) + Shell theme · iOS (20 modes).
 - **2026-11-03** — DEC-14: control tokens generated (see mng_apps_core_ds DECISIONS DEC-14).
 - **2026-11-04** — DEC-14: app shell exceptions removed (majority values); Continue size tokens. See mng_apps_core_ds PROGRESS.
+- **2026-11-05** — Repo links point to the dfmedia org (CLAUDE.md, README.md; same change in mng_apps_core_ds).
