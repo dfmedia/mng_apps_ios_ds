@@ -16,10 +16,12 @@ public struct MNGBrandPalette {
     public let sectiontabtext: UIColor
     public let sectiontabselected: UIColor
     public let sectiontabindicator: UIColor
+    /// Accepted market override for the header band (DEC-15); nil = follows navbar.
+    public let headerOverride: UIColor?
     /// Top bar icon tint: alias of `navtext` (DEC-13).
     public var navicon: UIColor { navtext }
-    /// Section-front header band (iOS only): alias of `navbar` (DEC-15). Exceptions: Core docs/SHELL-EXCEPTIONS.md.
-    public var header: UIColor { navbar }
+    /// Section-front header band (iOS only): navbar, or the market override (DEC-15, Core docs/SHELL-EXCEPTIONS.md).
+    public var header: UIColor { headerOverride ?? navbar }
     /// Alias of `action` (PLAT-04).
     public var buy: UIColor { action }
     /// Alias of `action` (PLAT-04).
@@ -51,7 +53,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Chicago Tribune (CT)
     public static let ct = MNGBrandPalette(
@@ -66,7 +69,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Daily Press (DP)
     public static let dp = MNGBrandPalette(
@@ -81,7 +85,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: UIColor(mngHex: 0x4050B6)  /* #4050b6 · rgb(64, 80, 182), DEC-15 override */
     )
     /// Hartford Courant (HC)
     public static let hc = MNGBrandPalette(
@@ -96,7 +101,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Morning Call (MC)
     public static let mc = MNGBrandPalette(
@@ -111,7 +117,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: UIColor(mngHex: 0x5C5B59)  /* #5c5b59 · rgb(92, 91, 89), DEC-15 override */
     )
     /// New York Daily News (NYDN)
     public static let nydn = MNGBrandPalette(
@@ -126,7 +133,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: UIColor(mngHex: 0x4050B6)  /* #4050b6 · rgb(64, 80, 182), DEC-15 override */
     )
     /// Orange County Register (OCR)
     public static let ocr = MNGBrandPalette(
@@ -141,7 +149,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Orlando Sentinel (OS)
     public static let os = MNGBrandPalette(
@@ -156,7 +165,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: UIColor(mngHex: 0x1875BE)  /* #1875be · rgb(24, 117, 190), DEC-15 override */
     )
     /// Petaluma Argus-Courier (PAC)
     public static let pac = MNGBrandPalette(
@@ -171,7 +181,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Pasadena Star News (PSN)
     public static let psn = MNGBrandPalette(
@@ -186,7 +197,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The San Diego Union-Tribune (SDUT)
     public static let sdut = MNGBrandPalette(
@@ -201,7 +213,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// San Gabriel Valley Tribune (SGVT)
     public static let sgvt = MNGBrandPalette(
@@ -216,7 +229,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Sonoma Index Tribune (SIT)
     public static let sit = MNGBrandPalette(
@@ -231,7 +245,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Sun Sentinel (SS)
     public static let ss = MNGBrandPalette(
@@ -246,7 +261,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: UIColor(mngHex: 0x136283)  /* #136283 · rgb(19, 98, 131), DEC-15 override */
     )
     /// Buffzone (TB)
     public static let tb = MNGBrandPalette(
@@ -261,7 +277,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Bay Area News (TBAN)
     public static let tban = MNGBrandPalette(
@@ -276,7 +293,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Boulder County Preps (TBCP)
     public static let tbcp = MNGBrandPalette(
@@ -291,7 +309,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Broomfield Enterprise News (TBE)
     public static let tbe = MNGBrandPalette(
@@ -306,7 +325,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Boston Herald (TBH)
     public static let tbh = MNGBrandPalette(
@@ -321,7 +341,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Boston Herald Sports (TBHS)
     public static let tbhs = MNGBrandPalette(
@@ -336,7 +357,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Canon City Daily Record (TCCDR)
     public static let tccdr = MNGBrandPalette(
@@ -351,7 +373,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Chico Enterprise Record (TCE)
     public static let tce = MNGBrandPalette(
@@ -366,7 +389,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Colorado Hometown Weekly (TCHW)
     public static let tchw = MNGBrandPalette(
@@ -381,7 +405,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Citizens' Voice (TCV)
     public static let tcv = MNGBrandPalette(
@@ -396,7 +421,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Daily Breeze (TDB)
     public static let tdb = MNGBrandPalette(
@@ -411,7 +437,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Daily Camera (TDC)
     public static let tdc = MNGBrandPalette(
@@ -426,7 +453,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Delaware County Daily Times (TDCD)
     public static let tdcd = MNGBrandPalette(
@@ -441,7 +469,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Daily Freeman (TDF)
     public static let tdf = MNGBrandPalette(
@@ -456,7 +485,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Daily Herald (TDH)
     public static let tdh = MNGBrandPalette(
@@ -471,7 +501,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Daily Local Weschester (TDLW)
     public static let tdlw = MNGBrandPalette(
@@ -486,7 +517,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Denver Post (TDP)
     public static let tdp = MNGBrandPalette(
@@ -501,7 +533,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Denver Post Sports (TDPS)
     public static let tdps = MNGBrandPalette(
@@ -516,7 +549,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The East Bay Times (TEBT)
     public static let tebt = MNGBrandPalette(
@@ -531,7 +565,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Estes Park Trail Gazette (TEPTG)
     public static let teptg = MNGBrandPalette(
@@ -546,7 +581,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Eureka Times Standard (TETS)
     public static let tets = MNGBrandPalette(
@@ -561,7 +597,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Fort Morgan Times (TFMT)
     public static let tfmt = MNGBrandPalette(
@@ -576,7 +613,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Greeley Tribune (TGT)
     public static let tgt = MNGBrandPalette(
@@ -591,7 +629,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Inland Valley Daily Bulletin (TIVDB)
     public static let tivdb = MNGBrandPalette(
@@ -606,7 +645,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Journal Advocate (TJA)
     public static let tja = MNGBrandPalette(
@@ -621,7 +661,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Los Angeles Daily News (TLADN)
     public static let tladn = MNGBrandPalette(
@@ -636,7 +677,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Long Beach Press-Telegram (TLBPT)
     public static let tlbpt = MNGBrandPalette(
@@ -651,7 +693,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Loveland Reporter Herald (TLR)
     public static let tlr = MNGBrandPalette(
@@ -666,7 +709,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Lowell Sun News for Mobile (TLS)
     public static let tls = MNGBrandPalette(
@@ -681,7 +725,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Longmont Times-Call for Mobile (TLTC)
     public static let tltc = MNGBrandPalette(
@@ -696,7 +741,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Monterey County Herald (TMCH)
     public static let tmch = MNGBrandPalette(
@@ -711,7 +757,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Macomb Daily (TMD)
     public static let tmd = MNGBrandPalette(
@@ -726,7 +773,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Marin Independent Journal News (TMI)
     public static let tmi = MNGBrandPalette(
@@ -741,7 +789,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Morning Journal (TMJ)
     public static let tmj = MNGBrandPalette(
@@ -756,7 +805,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Mercury News (TMN)
     public static let tmn = MNGBrandPalette(
@@ -771,7 +821,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Morning Sun (TMS)
     public static let tms = MNGBrandPalette(
@@ -786,7 +837,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The News Herald (TNH)
     public static let tnh = MNGBrandPalette(
@@ -801,7 +853,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Oneida Daily Dispatch (TOD)
     public static let tod = MNGBrandPalette(
@@ -816,7 +869,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Oakland Press (TOP)
     public static let top = MNGBrandPalette(
@@ -831,7 +885,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Press Democrat (TPD)
     public static let tpd = MNGBrandPalette(
@@ -846,7 +901,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: UIColor(mngHex: 0x9E0B0F)  /* #9e0b0f · rgb(158, 11, 15), DEC-15 override */
     )
     /// The Press-Enterprise (TPE)
     public static let tpe = MNGBrandPalette(
@@ -861,7 +917,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Pottstown Mercury (TPM)
     public static let tpm = MNGBrandPalette(
@@ -876,7 +933,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Reporter for Mobile (TR)
     public static let tr = MNGBrandPalette(
@@ -891,7 +949,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Redlands Daily Facts (TRDF)
     public static let trdf = MNGBrandPalette(
@@ -906,7 +965,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Reading Eagle (TRE)
     public static let tre = MNGBrandPalette(
@@ -921,7 +981,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Republican-Herald (TRH)
     public static let trh = MNGBrandPalette(
@@ -936,7 +997,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Royal Oak Tribune (TROT)
     public static let trot = MNGBrandPalette(
@@ -951,7 +1013,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Troy Record (TRR)
     public static let trr = MNGBrandPalette(
@@ -966,7 +1029,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Saratogian (TSAR)
     public static let tsar = MNGBrandPalette(
@@ -981,7 +1045,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: UIColor(mngHex: 0x5D5B59)  /* #5d5b59 · rgb(93, 91, 89), DEC-15 override */
     )
     /// The San Bernardino Sun (TSBS)
     public static let tsbs = MNGBrandPalette(
@@ -996,7 +1061,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Santa Cruz Sentinel (TSCS)
     public static let tscs = MNGBrandPalette(
@@ -1011,7 +1077,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Sentinel and Enterprise (TSEB)
     public static let tseb = MNGBrandPalette(
@@ -1026,7 +1093,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// St. Paul Pioneer Press (TSPPP)
     public static let tsppp = MNGBrandPalette(
@@ -1041,7 +1109,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Standard-Speaker (TSS)
     public static let tss = MNGBrandPalette(
@@ -1056,7 +1125,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Silicon Valley (TSV)
     public static let tsv = MNGBrandPalette(
@@ -1071,7 +1141,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Trentonian (TT)
     public static let tt = MNGBrandPalette(
@@ -1086,7 +1157,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// The Times Herald (TTH)
     public static let tth = MNGBrandPalette(
@@ -1101,7 +1173,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Times-Tribune (TTT)
     public static let ttt = MNGBrandPalette(
@@ -1116,7 +1189,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Ukiah Daily Journal (TUDJ)
     public static let tudj = MNGBrandPalette(
@@ -1131,7 +1205,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Vacaville Reporter (TVR)
     public static let tvr = MNGBrandPalette(
@@ -1146,7 +1221,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Vallejo Times Herald News (TVTH)
     public static let tvth = MNGBrandPalette(
@@ -1161,7 +1237,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Woodland Daily Democrat (TWDD)
     public static let twdd = MNGBrandPalette(
@@ -1176,7 +1253,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Whittier Daily News (TWDN)
     public static let twdn = MNGBrandPalette(
@@ -1191,7 +1269,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: nil
     )
     /// Virginian Pilot (VP)
     public static let vp = MNGBrandPalette(
@@ -1206,7 +1285,8 @@ public enum MNGBrandPalettes {
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabtext: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
         sectiontabselected: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
-        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */
+        sectiontabindicator: UIColor(mngHex: 0x333333)  /* #333333 · rgb(51, 51, 51) */,
+        headerOverride: UIColor(mngHex: 0x3F50B6)  /* #3f50b6 · rgb(63, 80, 182), DEC-15 override */
     )
 
     /// Palette for a market code, e.g. "TDP". Codes match the Gradle flavor names upper-cased.

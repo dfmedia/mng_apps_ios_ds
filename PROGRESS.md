@@ -26,3 +26,4 @@ Legend: ✅ done · 🔄 in progress · ⏸ waiting on review/input · ⬜ not s
 - **2026-11-05** — Repo links point to the dfmedia org (CLAUDE.md, README.md; same change in mng_apps_core_ds).
 - **2026-11-05** — DEC-15: `header` (MNGBrandPalette.header) now follows navbar (regenerated from mng_apps_core_ds). Figma: Components · App shell › 01 · Header band exceptions; header variables wait on the Core library import (majority vs suggested override per exception market).
 - **2026-11-05** — Figma: header variables in Shell colors · iOS (78, aliases of Core navbar) and Shell theme · iOS; Header band exceptions rebuilt on the live variables (see mng_apps_core_ds DEC-15).
+- **2026-11-05** — DEC-15 overrides accepted: MNGBrandPalette.headerOverride for DP, MC, NYDN, OS, SS, TPD, TSAR, VP (header = override ?? navbar). Figma: those 8 header variables hold the shipped hex; samples relinked. See mng_apps_core_ds DEC-15.
