@@ -1,0 +1,28 @@
+# Compile check: type-checks the generated tokens and the components against the iOS SDK on every push.
+# The Swift files are generated in mng_apps_core_ds (Style Dictionary); a failure here means the generator needs a fix there.
+name: Compile check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  swift:
+    name: Swift (iOS 15 SDK, simulator)
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Xcode version
+        run: xcodebuild -version
+      - name: Type-check Tokens/ and Components/
+        run: |
+          set -euo pipefail
+          files=$(find Tokens Components -name '*.swift' | sort)
+          echo "$files"
+          # iOS 15: the lowest version the code allows (SwiftUI Color(uiColor:)).
+          xcrun --sdk iphonesimulator swiftc -typecheck \
+            -target arm64-apple-ios15.0-simulator \
+            -module-name MNGDesignSystem \
+            $files
