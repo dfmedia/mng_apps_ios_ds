@@ -13,7 +13,7 @@ jobs:
     runs-on: macos-15
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Xcode version
         run: xcodebuild -version
       - name: Type-check Tokens/ and Components/
