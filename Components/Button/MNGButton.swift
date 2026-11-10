@@ -76,10 +76,11 @@ public struct MNGPrimaryButtonStyle: ButtonStyle {
     public init(market: String) { self.market = market }
 
     public func makeBody(configuration: Configuration) -> some View {
-        Body(configuration: configuration, market: market)
+        StyledLabel(configuration: configuration, market: market)
     }
 
-    private struct Body: View {
+    // Not named `Body`: that name is ButtonStyle's associated type (compile check, 2026-11-10).
+    private struct StyledLabel: View {
         let configuration: ButtonStyleConfiguration
         let market: String
         @Environment(\.isEnabled) private var isEnabled
