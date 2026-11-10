@@ -28,3 +28,4 @@ Legend: ✅ done · 🔄 in progress · ⏸ waiting on review/input · ⬜ not s
 - **2026-11-05** — Figma: header variables in Shell colors · iOS (78, aliases of Core navbar) and Shell theme · iOS; Header band exceptions rebuilt on the live variables (see mng_apps_core_ds DEC-15).
 - **2026-11-05** — DEC-15 overrides accepted: MNGBrandPalette.headerOverride for DP, MC, NYDN, OS, SS, TPD, TSAR, VP (header = override ?? navbar). Figma: those 8 header variables hold the shipped hex; samples relinked. See mng_apps_core_ds DEC-15.
 - **2026-11-10** — DEC-16: Tokens/MNGSystemColors.swift (system colors: Core 11 + iOS 77, plus 8 brand-following properties on MNGBrandPalette), generated from mng_apps_core_ds.
+- **2026-11-10** — Figma: System colors · iOS (85 variables, 8 alias the Core Brand theme) collection (DEC-16; see mng_apps_core_ds).

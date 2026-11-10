@@ -127,9 +127,9 @@ public enum MNGSystemColors {
     /// `paywallViewPurchaseButtonFontColor` (iOS): same in all 77 markets
     public static let paywallViewPurchaseButtonFont = UIColor(mngHex: 0xFFFFFF)  // #ffffff · 255, 255, 255
     /// `progressHUDBackgroundColor` (iOS): same in all 77 markets
-    public static let progressHudbackground = UIColor(mngHex: 0xFFFFFF)  // #ffffff · 255, 255, 255
+    public static let progressHudBackground = UIColor(mngHex: 0xFFFFFF)  // #ffffff · 255, 255, 255
     /// `progressHUDForegroundColor` (iOS): 66 of 77 markets; exceptions documented only (DEC-16)
-    public static let progressHudforeground = UIColor(mngHex: 0x004E87)  // #004e87 · 0, 78, 135
+    public static let progressHudForeground = UIColor(mngHex: 0x004E87)  // #004e87 · 0, 78, 135
     /// `pushNotificationPromptBellTint` (iOS): same in all 77 markets
     public static let pushNotificationPromptBellTint = UIColor(mngHex: 0x1955A5)  // #1955a5 · 25, 85, 165
     /// `pushNotificationPromptMessageTextColor` (iOS): same in all 77 markets
