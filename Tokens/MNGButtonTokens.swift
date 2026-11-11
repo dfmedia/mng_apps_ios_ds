@@ -12,13 +12,13 @@ public enum MNGButtonTokens {
 
     /// Corner radius.
     public static let cornerRadius: CGFloat = 4
-    /// Height. PROVISIONAL: not in the source (MISSING-ASSETS 5.5). Future: BTN-01.
+    /// Height. PROVISIONAL: not in the source (MISSING-ASSETS 5.4). Future: BTN-01.
     public static let height: CGFloat = 44
 
 
     /// Label font: OpenSans-Bold 14, uppercase. Falls back to the bold system font at the same size.
     public static var labelFont: UIFont { UIFont(name: "OpenSans-Bold", size: 14) ?? .boldSystemFont(ofSize: 14) }
-    /// Text link font. PROVISIONAL (MISSING-ASSETS 5.5).
+    /// Text link font. PROVISIONAL (MISSING-ASSETS 5.4).
     public static var linkFont: UIFont { UIFont(name: "OpenSans-Regular", size: 14) ?? .systemFont(ofSize: 14) }
 
     /// Text link color per market (iOS `paywallLinkColor`, shipped).
