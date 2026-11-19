@@ -52,7 +52,7 @@ public final class MNGPrimaryButton: UIButton {
 }
 
 /// Text link button as shipped on iOS (paywall Log In): market `paywallLinkColor`, no underline.
-/// Font is provisional (MISSING-ASSETS 5.4).
+/// Font is provisional: the Apps team says Open Sans Regular 14 (11 or 12 in 8 markets); rebuild on hold (MISSING-ASSETS 5.10).
 public final class MNGTextLinkButton: UIButton {
     public init?(marketCode: String, title: String) {
         guard let color = MNGButtonTokens.linkColor(forMarket: marketCode) else { return nil }
@@ -96,7 +96,7 @@ public struct MNGPrimaryButtonStyle: ButtonStyle {
                 .foregroundColor(label)
                 .frame(maxWidth: .infinity, minHeight: MNGButtonTokens.height)
                 .background(shape.fill(fill))
-                .opacity(configuration.isPressed ? 0.8 : 1)   // pressed: not in the source (MISSING-ASSETS 5.4)
+                .opacity(configuration.isPressed ? 0.8 : 1)   // pressed: the shipped title fades, fill stays (Apps team, 2026-11-18); rebuild on hold (MISSING-ASSETS 5.10)
         }
     }
 }
