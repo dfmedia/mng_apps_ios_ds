@@ -5,30 +5,18 @@ import CoreGraphics
 /// Layout spacing, touch targets, breakpoints (window width, pt) and component metrics, production values.
 /// Core values (no platform in the name) are the same on Android.
 public enum MNGScale {
-    /// Outer margin of a section-front cell (both apps 16)
-    public static let spaceCellMargin: CGFloat = 16
-    /// Space between elements inside a section-front cell (both apps 8)
-    public static let spaceCellGap: CGFloat = 8
-    /// Article side margin on phones (both apps 16; iOS grows with width, Android 30 landscape / 75 tablet)
-    public static let spaceArticleSide: CGFloat = 16
-    /// Article card top margin, iPhone (iOS)
-    public static let spaceArticleTop: CGFloat = 20
-    /// Article card top margin, iPad (iOS)
-    public static let spaceArticleTopTablet: CGFloat = 40
-    /// Section-front items are sized in twelfths (both apps)
-    public static let gridColumns: Int = 12
-    /// Apple minimum touch target (not enforced in the app today) (iOS)
-    public static let sizeTouchMin: CGFloat = 44
-    /// Section front: x-small → small at this window width (iOS)
-    public static let breakpointFrontSmall: CGFloat = 668
-    /// Section front: small → medium (iOS)
-    public static let breakpointFrontMedium: CGFloat = 835
-    /// Section front: medium → large (12.9-inch iPad landscape) (iOS)
-    public static let breakpointFrontLarge: CGFloat = 1113
-    /// Section-front item widths: medium step (differs from front medium, LAY-01) (iOS)
-    public static let breakpointItemMedium: CGFloat = 769
-    /// Section-front item widths: large step (differs from front large, LAY-01) (iOS)
-    public static let breakpointItemLarge: CGFloat = 1025
+    /// Ad slot banner-phone width: first ad slot (phone), sticky footer banner (phone). Same on iOS (pt) and Android (dp)
+    public static let componentAdBannerPhoneWidth: CGFloat = 320
+    /// Ad slot banner-phone height: first ad slot (phone), sticky footer banner (phone). Same on iOS (pt) and Android (dp)
+    public static let componentAdBannerPhoneHeight: CGFloat = 50
+    /// Ad slot banner-tablet width: first ad slot (tablet), sticky footer banner (tablet). Same on iOS (pt) and Android (dp)
+    public static let componentAdBannerTabletWidth: CGFloat = 728
+    /// Ad slot banner-tablet height: first ad slot (tablet), sticky footer banner (tablet). Same on iOS (pt) and Android (dp)
+    public static let componentAdBannerTabletHeight: CGFloat = 90
+    /// Ad slot box width: other ad slots. Same on iOS (pt) and Android (dp)
+    public static let componentAdBoxWidth: CGFloat = 300
+    /// Ad slot box height: other ad slots. Same on iOS (pt) and Android (dp)
+    public static let componentAdBoxHeight: CGFloat = 250
     /// Subscription option button inner padding (iOS)
     public static let componentSubscriptionOptionInset: CGFloat = 16
     /// Subscription option button corner radius (iOS)
@@ -93,4 +81,28 @@ public enum MNGScale {
     public static let componentContinueWidth: CGFloat = 159
     /// Your News Continue button height (Continue-* PNG image, 159 x 55 pt) (iOS)
     public static let componentContinueHeight: CGFloat = 55
+    /// Outer margin of a section-front cell (both apps 16)
+    public static let spaceCellMargin: CGFloat = 16
+    /// Space between elements inside a section-front cell (both apps 8)
+    public static let spaceCellGap: CGFloat = 8
+    /// Article side margin on phones (both apps 16; iOS grows with width, Android 30 landscape / 75 tablet)
+    public static let spaceArticleSide: CGFloat = 16
+    /// Article card top margin, iPhone (iOS)
+    public static let spaceArticleTop: CGFloat = 20
+    /// Article card top margin, iPad (iOS)
+    public static let spaceArticleTopTablet: CGFloat = 40
+    /// Section-front items are sized in twelfths (both apps)
+    public static let gridColumns: Int = 12
+    /// Apple minimum touch target (not enforced in the app today) (iOS)
+    public static let sizeTouchMin: CGFloat = 44
+    /// Section front: x-small → small at this window width (iOS)
+    public static let breakpointFrontSmall: CGFloat = 668
+    /// Section front: small → medium (iOS)
+    public static let breakpointFrontMedium: CGFloat = 835
+    /// Section front: medium → large (12.9-inch iPad landscape) (iOS)
+    public static let breakpointFrontLarge: CGFloat = 1113
+    /// Section-front item widths: medium step (differs from front medium, LAY-01) (iOS)
+    public static let breakpointItemMedium: CGFloat = 769
+    /// Section-front item widths: large step (differs from front large, LAY-01) (iOS)
+    public static let breakpointItemLarge: CGFloat = 1025
 }

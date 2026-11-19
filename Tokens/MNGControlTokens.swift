@@ -20,6 +20,10 @@ public enum MNGControlTokens {
     public static let switchOffTrack = UIColor(mngHex: 0xE9E9EA)  // #e9e9ea
     /// UISwitch thumb (system default) (DEC-14)
     public static let switchThumb = UIColor(mngHex: 0xFFFFFF)  // #ffffff
+    /// Segmented control (For You / Saved / Alerts): selected segment, iOS system style, every market (Apps team, DREAMT-4718)
+    public static let segmentedSelected = UIColor(mngHex: 0xFFFFFF)  // #ffffff
+    /// Segmented control track, iOS system style, every market (Apps team, DREAMT-4718)
+    public static let segmentedTrack = UIColor(mngHex: 0xF2F2F7)  // #f2f2f7
     /// Subscription option label: OpenSans-Bold 16 (SubscriptionOptionButton.xib)
     public static var subscriptionOptionFont: UIFont { UIFont(name: "OpenSans-Bold", size: 16) ?? .boldSystemFont(ofSize: 16) }
 }
