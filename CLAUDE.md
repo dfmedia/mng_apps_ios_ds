@@ -14,7 +14,7 @@ Typical iOS-only items: SF Symbols glyphs, Sign in with Apple, native eNewspaper
 |---|---|
 | Figma | MNG iOS Design System (`uNxwBNoP4ODDUFGByi73mZ`) |
 | Repo | [dfmedia/mng_apps_ios_ds](https://github.com/dfmedia/mng_apps_ios_ds) · local `~/Github/mng_apps_ios_ds` |
-| Shipped code | TroncKit @ `e30ad2585` |
+| Shipped code | TroncKit @ `f79fe3339` (export 2026-11-19) |
 | Style guide | https://claude.ai/artifact/V364juyHFU3STfVZ6EgjMc |
 
 Shipped-code data and the iOS vs Android comparisons stay in the Core repo (`data/`), so there is one copy. Figma variables here alias Core variables; never copy a Core value into this file.
