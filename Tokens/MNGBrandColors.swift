@@ -24,8 +24,6 @@ public struct MNGBrandPalette {
     public var header: UIColor { headerOverride ?? navbar }
     /// Alias of `action` (PLAT-04).
     public var buy: UIColor { action }
-    /// Alias of `action` (PLAT-04).
-    public var continueButton: UIColor { action }
 }
 
 public extension UIColor {
