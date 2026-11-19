@@ -10,15 +10,17 @@ public enum MNGButtonTokens {
     /// Disabled label. Core `button.disabled.label`.
     public static let disabledLabel = UIColor(mngHex: 0x767676)  /* #767676 · rgb(118, 118, 118) */
 
-    /// Corner radius.
-    public static let cornerRadius: CGFloat = 4
-    /// Height. PROVISIONAL: not in the source; shipped purchase button is at least 45 pt (MISSING-ASSETS 5.10). Future: BTN-01.
-    public static let height: CGFloat = 44
+    /// Corner radius: meter paywall purchase button, all 78 markets (DEC-22).
+    public static let cornerRadius: CGFloat = 8
+    /// Border width; the border is drawn in the fill color (DEC-22).
+    public static let borderWidth: CGFloat = 0.7
+    /// Height: at least 45 pt, always 45 in practice (one line of fixed 14 pt text; DEC-22). Future: BTN-01.
+    public static let height: CGFloat = 45
 
 
     /// Label font: OpenSans-Bold 14, uppercase. Falls back to the bold system font at the same size.
     public static var labelFont: UIFont { UIFont(name: "OpenSans-Bold", size: 14) ?? .boldSystemFont(ofSize: 14) }
-    /// Text link font. PROVISIONAL (iOS button rebuild on hold, MISSING-ASSETS 5.10).
+    /// Text link font (whole sentence underlined). 11 pt in BS, DP, HC, MC, OS, SS and 12 pt in NYDN, VP: documented only.
     public static var linkFont: UIFont { UIFont(name: "OpenSans-Regular", size: 14) ?? .systemFont(ofSize: 14) }
 
     /// Text link color per market (iOS `paywallLinkColor`, shipped).

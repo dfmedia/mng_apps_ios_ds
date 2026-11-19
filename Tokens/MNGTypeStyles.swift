@@ -38,6 +38,10 @@ public enum MNGTextStyle: String, CaseIterable {
     case authorBio
     /// Bottom tab label (iOS `tab-item`): OpenSans-Bold 10 pt
     case bottomTabLabel
+    /// Breaking-news banner text (iOS `breaking-banner`): OpenSans-Bold 14 pt
+    case breakingNewsBannerText
+    /// Button label (iOS `paywall-purchase`): OpenSans-Bold 14 pt
+    case buttonLabel
     /// Gallery title (iOS `page-gallery`): OpenSans-Bold 18 pt
     case galleryTitle
     /// Headline, bullets (iOS `cell-headline-bullets`): PTSerif-Regular 15 pt
@@ -62,6 +66,8 @@ public enum MNGTextStyle: String, CaseIterable {
     case menuHeader
     /// Menu item (iOS `menu-text`): OpenSans-Light 16 pt
     case menuItem
+    /// Newsletters button (iOS `newsletters-button`): OpenSans-SemiBold 18 pt
+    case newslettersButton
     /// Paywall body (iOS `blocker-description`): OpenSans-Light 14 pt
     case paywallBody
     /// Paywall buy text (iOS `blocker-buy`): OpenSans-Bold 14 pt
@@ -72,6 +78,8 @@ public enum MNGTextStyle: String, CaseIterable {
     case paywallHeading
     /// Paywall heading, large (iOS `blocker-header-regular`): Spectral-Bold 60 pt
     case paywallHeadingLarge
+    /// Paywall log-in link (iOS `paywall-login-link`): OpenSans-Regular 14 pt
+    case paywallLogInLink
     /// Paywall log-in text (iOS `blocker-login`): OpenSans-Light 14 pt
     case paywallLogInText
     /// Paywall log-in text, large (iOS `blocker-login-regular`): OpenSans-Light 16 pt
@@ -82,8 +90,16 @@ public enum MNGTextStyle: String, CaseIterable {
     case paywallPrice
     /// Paywall store policy header (iOS `blocker-store-policy-header`): OpenSans-Light 16 pt
     case paywallStorePolicyHeader
+    /// Push prompt No (iOS `push-no`): OpenSans-Regular 14 pt
+    case pushPromptNo
+    /// Push prompt Yes (iOS `push-yes`): OpenSans-Bold 14 pt
+    case pushPromptYes
+    /// Savings label (iOS `savings-label`): OpenSans-Bold 13 pt
+    case savingsLabel
     /// Score (iOS `cell-score`): OpenSans-Bold 36 pt
     case score
+    /// Search result: section name (iOS `search-section-result`): OpenSans-Light 20 pt
+    case searchResultSectionName
     /// Section-front blurb (iOS `cell-body`): Spectral-Regular 16 pt
     case sectionFrontBlurb
     /// Section-front byline / timestamp (iOS `cell-timestamp`): OpenSans-SemiBold 13 pt
@@ -102,6 +118,12 @@ public enum MNGTextStyle: String, CaseIterable {
     case sectionFrontLabelKicker
     /// Sections list header (iOS `section-list-header`): OpenSans-Bold 14 pt
     case sectionsListHeader
+    /// Section tabs (iOS `section-tab`): OpenSans-Bold 11 pt
+    case sectionTabs
+    /// Settings header (iOS `settings-header`): OpenSans-Bold 14 pt
+    case settingsHeader
+    /// Settings row (iOS `settings-row`): OpenSans-Regular 14 pt
+    case settingsRow
     /// Shared body (iOS `body`): OpenSans-Regular 14 pt
     case sharedBody
     /// Shared body bold (iOS `body-bold`): OpenSans-Bold 14 pt
@@ -140,6 +162,8 @@ public enum MNGTextStyle: String, CaseIterable {
         case .articleSubhead: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 18)
         case .authorBio: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 18)
         case .bottomTabLabel: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 10)
+        case .breakingNewsBannerText: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
+        case .buttonLabel: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
         case .galleryTitle: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 18)
         case .headlineBullets: return MNGTextStyleSpec(postscript: "PTSerif-Regular", size: 15)
         case .headlineMediaAbove: return MNGTextStyleSpec(postscript: "PTSerif-Bold", size: 21)
@@ -152,17 +176,23 @@ public enum MNGTextStyle: String, CaseIterable {
         case .labelLightSmall: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 10)
         case .menuHeader: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
         case .menuItem: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 16)
+        case .newslettersButton: return MNGTextStyleSpec(postscript: "OpenSans-SemiBold", size: 18)
         case .paywallBody: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 14)
         case .paywallBuyText: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
         case .paywallBuyTextLarge: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 16)
         case .paywallHeading: return MNGTextStyleSpec(postscript: "Spectral-Bold", size: 35)
         case .paywallHeadingLarge: return MNGTextStyleSpec(postscript: "Spectral-Bold", size: 60)
+        case .paywallLogInLink: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 14)
         case .paywallLogInText: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 14)
         case .paywallLogInTextLarge: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 16)
         case .paywallPlanName: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
         case .paywallPrice: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 24)
         case .paywallStorePolicyHeader: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 16)
+        case .pushPromptNo: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 14)
+        case .pushPromptYes: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
+        case .savingsLabel: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 13)
         case .score: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 36)
+        case .searchResultSectionName: return MNGTextStyleSpec(postscript: "OpenSans-Light", size: 20)
         case .sectionFrontBlurb: return MNGTextStyleSpec(postscript: "Spectral-Regular", size: 16)
         case .sectionFrontBylineTimestamp: return MNGTextStyleSpec(postscript: "OpenSans-SemiBold", size: 13)
         case .sectionFrontCaption: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 12)
@@ -172,6 +202,9 @@ public enum MNGTextStyle: String, CaseIterable {
         case .sectionFrontHeadlineThin: return MNGTextStyleSpec(postscript: "Spectral-Bold", size: 14)
         case .sectionFrontLabelKicker: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
         case .sectionsListHeader: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
+        case .sectionTabs: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 11)
+        case .settingsHeader: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
+        case .settingsRow: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 14)
         case .sharedBody: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 14)
         case .sharedBodyBold: return MNGTextStyleSpec(postscript: "OpenSans-Bold", size: 14)
         case .sharedCaption: return MNGTextStyleSpec(postscript: "OpenSans-Regular", size: 11)

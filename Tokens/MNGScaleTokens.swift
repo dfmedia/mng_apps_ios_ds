@@ -37,10 +37,54 @@ public enum MNGScale {
     public static let componentGoogleSignInRadius: CGFloat = 2
     /// Your News topic checkbox, square (below the touch minimum) (iOS)
     public static let componentCheckboxSize: CGFloat = 30
-    /// Icon inside social sign-in buttons (iOS)
+    /// Icon inside social sign-in buttons (native Arc login, not shown in production) (iOS)
     public static let componentSocialSignInIcon: CGFloat = 24
+    /// Navigation bar height (iOS default; logo at natural size) (iOS)
+    public static let componentTopBarHeight: CGFloat = 44
+    /// Section tabs bar height (iOS)
+    public static let componentSectionTabsHeight: CGFloat = 44
+    /// Gap between section tabs; half pads each end (iOS)
+    public static let componentSectionTabsGap: CGFloat = 15
+    /// Selected section tab underline, full tab width, fades in over 0.32 s (iOS)
+    public static let componentSectionTabsIndicator: CGFloat = 4
+    /// Breaking-news banner height (iOS)
+    public static let componentBreakingNewsBannerHeight: CGFloat = 35
+    /// Section header band height (iOS)
+    public static let componentSectionHeaderBandHeight: CGFloat = 30
+    /// Section header band left and right text inset (iOS)
+    public static let componentSectionHeaderBandInset: CGFloat = 10
+    /// Band holding the For You / Saved / Alerts segmented control (iOS)
+    public static let componentSegmentedControlBandHeight: CGFloat = 50
+    /// Settings section header band height (iOS)
+    public static let componentSettingsHeaderHeight: CGFloat = 30
+    /// Savings pill corner radius (iOS)
+    public static let componentSavingsLabelRadius: CGFloat = 13
+    /// Savings pill inset from the yearly option trailing edge, iPhone (iOS)
+    public static let componentSavingsLabelInset: CGFloat = 10
+    /// Savings pill inset from the yearly option trailing edge, iPad (iOS)
+    public static let componentSavingsLabelInsetTablet: CGFloat = 35
+    /// Savings pill width (110 x 30) (iOS)
+    public static let componentSavingsLabelWidth: CGFloat = 110
+    /// Savings pill height (110 x 30) (iOS)
+    public static let componentSavingsLabelHeight: CGFloat = 30
+    /// Notification prompt Yes / No button height (iOS)
+    public static let componentPermissionPromptHeight: CGFloat = 40
     /// Notification prompt Yes / No buttons corner radius (PushNotificationOptInView.xib) (iOS)
     public static let componentPermissionPromptRadius: CGFloat = 5
+    /// Manage App Subscription and Cancel buttons height (iOS)
+    public static let componentModalButtonHeight: CGFloat = 44
+    /// Newsletters buttons minimum height (incl. Apple / Google sign-in) (iOS)
+    public static let componentNewslettersButtonHeight: CGFloat = 52
+    /// Newsletters buttons corner radius (iOS)
+    public static let componentNewslettersButtonRadius: CGFloat = 9
+    /// Apple / Google icon inside Newsletters sign-in buttons (iOS)
+    public static let componentNewslettersButtonIcon: CGFloat = 22
+    /// Gap between icon and label in Newsletters buttons (iOS)
+    public static let componentNewslettersButtonIconGap: CGFloat = 12
+    /// Loading indicator card corner radius (iOS)
+    public static let componentLoadingIndicatorRadius: CGFloat = 12
+    /// Sport symbol in tournament loading (SF Symbols) (iOS)
+    public static let componentTournamentLoadingIcon: CGFloat = 72
     /// Tab bar icon width (Font Awesome, 26 x 23) (iOS)
     public static let componentTabBarIconWidth: CGFloat = 26
     /// Tab bar icon height (Font Awesome, 26 x 23) (iOS)

@@ -493,7 +493,7 @@ public enum MNGBrandPalettes {
         tabbar: UIColor(mngHex: 0x0072B4)  /* #0072b4 · rgb(0, 114, 180) */,
         tabactive: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
         tabinactive: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
-        action: UIColor(mngHex: 0x0072B4)  /* #0072b4 · rgb(0, 114, 180) */,
+        action: UIColor(mngHex: 0x000000)  /* #000000 · rgb(0, 0, 0) */,
         alert: UIColor(mngHex: 0xCF000E)  /* #cf000e · rgb(207, 0, 14) */,
         alerttext: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,
         sectiontabbar: UIColor(mngHex: 0xFFFFFF)  /* #ffffff · rgb(255, 255, 255) */,

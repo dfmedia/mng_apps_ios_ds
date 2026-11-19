@@ -1,16 +1,16 @@
 // MNG Apps button pilot (DEC-07). Spec: mng_apps_core_ds/docs/components/BUTTON.md
 // Hand-written component code. Every value comes from the generated tokens:
 //   Tokens/MNGBrandColors.swift  (fill = market `action`)
-//   Tokens/MNGButtonTokens.swift (label, disabled, radius, height, fonts, link colors)
+//   Tokens/MNGButtonTokens.swift (label, disabled, radius, border, height, fonts, link colors)
 // Requires iOS 15+ (UIButton.Configuration); the app already needs iOS 15 for StoreKit 2.
 import UIKit
 import SwiftUI
 
 // MARK: - UIKit
 
-/// Primary button as shipped on iOS: `action` fill, white Open Sans Bold 14 uppercase label,
-/// radius 4. (The iOS legacy-template markets ship radius 5 + a 1 pt border; acknowledged only, not built: DEC-10.)
-/// Disabled uses the Core disabled colors. Pressed uses the system filled-button highlight.
+/// Primary button as shipped on iOS (the meter paywall purchase button, the same in all 78 markets; DEC-22):
+/// `action` fill, a 0.7 pt border in the fill color, radius 8, 45 pt, white Open Sans Bold 14 label, always uppercase.
+/// Disabled uses the Core disabled colors (no disabled state ships on iOS). Pressed: the title fades, the fill stays.
 public final class MNGPrimaryButton: UIButton {
     public let marketCode: String
     private let palette: MNGBrandPalette
@@ -34,6 +34,8 @@ public final class MNGPrimaryButton: UIButton {
             let fill = enabled ? palette.action : MNGButtonTokens.disabledFill
             let label = enabled ? MNGButtonTokens.primaryLabel : MNGButtonTokens.disabledLabel
             c.baseBackgroundColor = fill
+            c.background.strokeColor = fill
+            c.background.strokeWidth = MNGButtonTokens.borderWidth
             c.baseForegroundColor = label
             c.attributedTitle = AttributedString((c.title ?? "").uppercased(),
                                                  attributes: AttributeContainer([.font: MNGButtonTokens.labelFont, .foregroundColor: label]))
@@ -51,14 +53,15 @@ public final class MNGPrimaryButton: UIButton {
     }
 }
 
-/// Text link button as shipped on iOS (paywall Log In): market `paywallLinkColor`, no underline.
-/// Font is provisional: the Apps team says Open Sans Regular 14 (11 or 12 in 8 markets); rebuild on hold (MISSING-ASSETS 5.10).
+/// Text link button as shipped on iOS (meter paywall Log In): market `paywallLinkColor`, Open Sans Regular 14,
+/// the whole sentence underlined (DEC-22). 8 markets ship 11 or 12 pt; documented only.
 public final class MNGTextLinkButton: UIButton {
     public init?(marketCode: String, title: String) {
         guard let color = MNGButtonTokens.linkColor(forMarket: marketCode) else { return nil }
         super.init(frame: .zero)
         var config = UIButton.Configuration.plain()
-        config.attributedTitle = AttributedString(title, attributes: AttributeContainer([.font: MNGButtonTokens.linkFont]))
+        config.attributedTitle = AttributedString(title, attributes: AttributeContainer([.font: MNGButtonTokens.linkFont,
+                                                                                       .underlineStyle: NSUnderlineStyle.single.rawValue]))
         config.baseForegroundColor = color
         configuration = config
         heightAnchor.constraint(greaterThanOrEqualToConstant: MNGScale.sizeTouchMin).isActive = true   // Apple minimum touch target (DEC-11)
@@ -96,7 +99,8 @@ public struct MNGPrimaryButtonStyle: ButtonStyle {
                 .foregroundColor(label)
                 .frame(maxWidth: .infinity, minHeight: MNGButtonTokens.height)
                 .background(shape.fill(fill))
-                .opacity(configuration.isPressed ? 0.8 : 1)   // pressed: the shipped title fades, fill stays (Apps team, 2026-11-18); rebuild on hold (MISSING-ASSETS 5.10)
+                .overlay(shape.stroke(fill, lineWidth: MNGButtonTokens.borderWidth))
+                .opacity(configuration.isPressed ? 0.8 : 1)   // pressed: the shipped title fades, fill stays (Apps team, 2026-11-18)
         }
     }
 }

@@ -4,17 +4,17 @@ import UIKit
 
 /// Control and subscription-option values (majority of markets). Per-market tints use `MNGBrandPalette.action`.
 public enum MNGControlTokens {
-    /// Subscription option, unselected background (subscriptionInactiveColor; 69 of 77 markets; exceptions documented only, DEC-14)
+    /// Subscription option, unselected background (subscriptionInactiveColor; 70 of 78 markets; exceptions documented only, DEC-14)
     public static let subscriptionOptionUnselectedFill = UIColor(mngHex: 0xF1F1F1)  // #f1f1f1
-    /// Subscription option and primary button text (paywallPrimaryTextColor; 77 of 77 markets; exceptions documented only, DEC-14)
+    /// Subscription option and primary button text (paywallPrimaryTextColor; 78 of 78 markets; exceptions documented only, DEC-14)
     public static let subscriptionOptionLabel = UIColor(mngHex: 0xFFFFFF)  // #ffffff
-    /// Notification prompt Yes text (pushNotificationPromptYesButtonTextColor; 76 of 77 markets; exceptions documented only, DEC-14)
+    /// Notification prompt Yes text (pushNotificationPromptYesButtonTextColor; 77 of 78 markets; exceptions documented only, DEC-14)
     public static let permissionPromptYesLabel = UIColor(mngHex: 0xFFFFFF)  // #ffffff
-    /// Notification prompt No text (pushNotificationPromptNoButtonTextColor; 77 of 77 markets; exceptions documented only, DEC-14)
+    /// Notification prompt No text (pushNotificationPromptNoButtonTextColor; 78 of 78 markets; exceptions documented only, DEC-14)
     public static let permissionPromptNoLabel = UIColor(mngHex: 0x333333)  // #333333
-    /// Text size slider track (settingsSliderMinimumTrackTintColor; 70 of 77 markets; exceptions documented only, DEC-14)
+    /// Text size slider track (settingsSliderMinimumTrackTintColor; 71 of 78 markets; exceptions documented only, DEC-14)
     public static let textSizeSliderTrack = UIColor(mngHex: 0x999999)  // #999999
-    /// Text size slider tick marks (settingsSliderTickMarkTint; 70 of 77 markets; exceptions documented only, DEC-14)
+    /// Text size slider tick marks (settingsSliderTickMarkTint; 71 of 78 markets; exceptions documented only, DEC-14)
     public static let textSizeSliderTick = UIColor(mngHex: 0x999999)  // #999999
     /// UISwitch track, off (system default; the app sets only the on tint) (DEC-14)
     public static let switchOffTrack = UIColor(mngHex: 0xE9E9EA)  // #e9e9ea
