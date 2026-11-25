@@ -43,3 +43,4 @@ Legend: ✅ done · 🔄 in progress · ⏸ waiting on review/input · ⬜ not s
 - **2026-11-25** — DEC-28 (Core mng_apps_core_ds): first traced icon SVGs, iOS only, in icons/traced/: skip-back-15, skip-forward-15 (PostKit 15-second skip), exit-full-screen, player-error (error and offline), enews-coach-arrow. Each checked against the shipped PNG at its size (Core scripts/trace_icons.py, data/icon-traces.json).
 - **2026-11-25** — DEC-29 (Core mng_apps_core_ds): icons/traced/ removed (traces were not professional quality). iOS icons use SF Symbols: the list is Core docs/ICON-REPLACEMENTS.md; vectors from Core scripts/sf_symbols_vectors.swift on Karl's Mac.
 - **2026-11-25** — DEC-29 redraws (Core mng_apps_core_ds scripts/redraw_icons.py): icons/redrawn/unfollow-topic.svg (list version) and enews-coach-arrow.svg.
+- **2026-11-25** — icons/redrawn/unfollow-topic.svg removed: Karl redraws it (Core mng_apps_core_ds).
